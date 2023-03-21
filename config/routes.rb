@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
-  devise_for :users
+  # get 'categories/show'
+  # get 'categories/index'
+  # get 'categories/new'
+  # get 'categories/create'
+  # get 'categories/destroy'
+  # get 'categories/edit'
+
+  resources :users do
+    resources :categories
+  end
+
   get 'home/index'
   root to: 'home#index'
 end
+

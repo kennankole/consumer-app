@@ -9,7 +9,6 @@ RSpec.describe "home/index.html.erb", type: :feature do
   scenario 'When a user visits the home page' do
     visit "/"
     expect(page).to have_content("Snapscan")
-    expect(page).to have_content('Log out')
     expect(page).to have_button('Log out')
   end
 end
