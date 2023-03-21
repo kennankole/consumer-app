@@ -10,13 +10,13 @@ RSpec.describe "entities/new.html.erb", type: :feature do
     visit new_user_entity_path(user_id: user.id)
   end
 
-  it 'Creates new Transaction' do
+  it 'Creates new Transaction and redirects to transaction page' do
     expect(page).to have_content('Add New Transaction')
     fill_in 'Name', with: 'Transaction 1'
     fill_in 'Amout', with: 20.50
     select 'DevOps', from: 'entity_group_id'
     click_on 'Add Transaction'
     visit user_entities_path(user_id: user.id)
-    expect(page).to have_content('Find me in app/views/entities/index.html.erb')
+    expect(page).to have_content("Totals #{Entity.sum(:amout)}")
   end
 end
