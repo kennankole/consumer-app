@@ -1,13 +1,7 @@
 Rails.application.routes.draw do
-  # get 'categories/show'
-  # get 'categories/index'
-  # get 'categories/new'
-  # get 'categories/create'
-  # get 'categories/destroy'
-  # get 'categories/edit'
-
+  devise_for :users
   resources :users do
-    resources :categories
+    resources :categories, only: [:new, :create, :edit, :update, :destroy, :index]
   end
 
   get 'home/index'
