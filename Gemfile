@@ -76,4 +76,6 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 5.0'
 end
 gem 'devise'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass', '~> 6.3.0'
 gem 'rubocop', '>= 1.0', '< 2.0'
