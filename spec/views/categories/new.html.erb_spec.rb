@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "categories/create.html.erb", type: :system do
+RSpec.describe 'categories/create.html.erb', type: :system do
   user = User.create!(email: 'timm@me.com', password: 'passcode')
   before do
     login_as(user, scope: :user)

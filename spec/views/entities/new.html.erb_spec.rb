@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe "entities/new.html.erb", type: :system do
+RSpec.describe 'entities/new.html.erb', type: :system do
   user = User.create!(email: 'kamala@email.com', password: 'qwerty')
-  group1 = Group.create!(name: 'Docker', icon: 'urlhttps/img', user: user)
-  group2 = Group.create(name: 'DevOps', icon: 'urlhttps/img/img', user: user)
+  Group.create!(name: 'Docker', icon: 'urlhttps/img', user:)
+  Group.create!(name: 'DevOps', icon: 'urlhttps/img/img', user:)
 
   before do
     login_as(user, user: :scope)

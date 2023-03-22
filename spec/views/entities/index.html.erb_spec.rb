@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "entities/index.html.erb", type: :system do
+RSpec.describe 'entities/index.html.erb', type: :system do
   user = User.create!(email: 'daniel@email.com', password: 'passcode')
   before do
     login_as(user, scope: :user)
