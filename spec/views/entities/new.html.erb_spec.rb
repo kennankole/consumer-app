@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "entities/new.html.erb", type: :system do
-  user = User.create!(email: 'timothy@email.com', password: 'qwerty')
+  user = User.create!(email: 'kamala@email.com', password: 'qwerty')
   group1 = Group.create!(name: 'Docker', icon: 'urlhttps/img', user: user)
   group2 = Group.create(name: 'DevOps', icon: 'urlhttps/img/img', user: user)
 
