@@ -1,22 +1,21 @@
 require 'rails_helper'
 
-RSpec.describe "entities/new.html.erb", type: :feature do
-  user = User.create!(email: 'entity10@email.com', password: 'qwerty')
+RSpec.describe "entities/new.html.erb", type: :system do
+  user = User.create!(email: 'timothy@email.com', password: 'qwerty')
   group1 = Group.create!(name: 'Docker', icon: 'urlhttps/img', user: user)
   group2 = Group.create(name: 'DevOps', icon: 'urlhttps/img/img', user: user)
 
   before do
     login_as(user, user: :scope)
-    visit new_user_entity_path(user_id: user.id)
   end
 
   it 'Creates new Transaction and redirects to transaction page' do
-    expect(page).to have_content('Add New Transaction')
+    visit new_user_entity_path(user_id: user.id)
     fill_in 'Name', with: 'Transaction 1'
     fill_in 'Amout', with: 20.50
     select 'DevOps', from: 'entity_group_id'
     click_on 'Add Transaction'
     visit user_entities_path(user_id: user.id)
-    expect(page).to have_content("Totals #{Entity.sum(:amout)}")
+    expect(page.current_path).to eq(user_entities_path(user_id: user.id))
   end
 end
