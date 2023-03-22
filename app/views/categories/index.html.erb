@@ -1,0 +1,30 @@
+<section class="category-section">
+  <div class="header categories">
+    <%= link_to '<', home_index_path, class: "home-link-btn" %>
+    <div class="category-header">CATEGORIES</div>
+  </div>
+  <div class="category-container">
+    <div class="user-name">
+      <div>Username: <%= current_user.name %> </div>
+      <div>$<%= @totals %></div>
+    </div>
+    <% @group.each do |cat| %>
+    <%= link_to user_entities_path(user_id: current_user.id) do %>
+    <div class="category-list">
+      <div class="img">
+        <%= image_tag cat.icon %>
+        <%= cat.name %> 
+      </div>
+      <div class="price">
+        <p>$50.00</p> 
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+    <div class="new-category">
+      <div class="link-btn">
+        <%= link_to 'Add New Category', new_user_category_path(user_id: current_user.id) %>
+      </div>
+    </div>
+  </div>
+</section>
