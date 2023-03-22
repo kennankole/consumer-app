@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova&display=swap');
+
+* {
+  padding: 0;
+  font-family: 'Ibarra Real Nova', serif;
+  color: #434b54;
+}
+
+body {
+  max-width: 375px;
+  border: 1px solid rgb(161, 157, 157);
+  margin: 0 auto;
+  height: 100vh;
+  background: #f2f2f2;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 8%;
+  color: white;
+  font-size: 22px;
+}
+
+.home-text {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.category-list {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 2% 0;
+  margin: 5%;
+  justify-content: space-between;
+  background-color: #ffff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.img {
+  display: flex;
+  align-items: center;
+}
+
+.price {
+  padding: 2%;
+}
+
+img {
+  width: 30%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.user-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8% 3%;
+  background-color: #ffff;
+}
+
+.new-category {
+  position: fixed;
+  bottom: 0;
+  width: 375px;
+  display: flex;
+  align-items: center;
+  border: 1px solid white;
+  background: #5fb523;
+}
+
+.link-btn {
+  display: flex;
+  justify-content: center;
+  margin: 5%;
+  padding: 5%;
+  width: 100%;
+  border: 1px solid white;
+}
+
+.link-btn a {
+  color: white;
+  font-size: 28px;
+}
+
+.main-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20%;
+}
+
+.nav-elem {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 375px;
+}
+
+.login,
+.sign-up {
+  border-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin: 5%;
+  padding: 5%;
+  background-color: #ffff;
+  font-size: 26px;
+}
+
+.login:hover,
+.sign-up:hover {
+  background-color: #3778c2;
+}
+
+.login a:hover,
+.sign-up a:hover {
+  color: #ffff;
+}
+
+.logout-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.logout-btn:hover {
+  color: #fff;
+}
+
+.header.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.home-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link-text {
+  color: #ffff;
+  font-size: 18px;
+}
+
+.home-link-btn {
+  color: #ffff;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.category-header {
+  color: #fff;
+}

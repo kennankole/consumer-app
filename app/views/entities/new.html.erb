@@ -1,0 +1,28 @@
+<section class="transaction section">
+  <div class="header">
+    NEW TRANSACTION
+  </div>
+  <div class="form-container">
+  <h1>Add New Transaction</h1>
+    <%= form_with(model: @entity, url: user_entities_path(user_id: current_user.id)) do |form| %>
+      <div class="field">
+        <%= form.label :name %><br>
+        <%= form.text_field :name %>
+      </div>
+      <div class="field">
+        <%= form.label :amout %><br>
+        <%= form.number_field :amout, min: 0, step: '0.01' %>
+      </div>
+      <div class="field category">
+        <%= form.label :group_id, "Category" %><br>
+        <%= form.collection_select :group_id, @groups, :id, :name %>
+      </div>
+      <%= form.submit 'Add Transaction' %>
+    <% end %>
+    <div class="new-category">
+      <div class="link-btn">
+         <%= link_to 'BACK', user_categories_path(user_id: current_user.id) %>
+      </div>
+    </div>
+  </div>
+</section>
