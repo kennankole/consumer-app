@@ -50,7 +50,10 @@ After you're finished please remove all the comments and instructions!
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
-
+<div align="center">
+  <img src="app_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+</div>
 # 📖 [Consumer App tracker] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
