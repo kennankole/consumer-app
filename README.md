@@ -50,10 +50,7 @@ After you're finished please remove all the comments and instructions!
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
-<div align="center">
-  <img src="app_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
-</div>
+
 # 📖 [Consumer App tracker] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
@@ -100,6 +97,7 @@ consumer expenses on shopping done online
 
 - [Live Demo Link](https://consumer-app-17ao.onrender.com)
 
+- [Project Video Demo](https://www.loom.com/share/2a23a08093df4e77bdf1028306a26c45)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
