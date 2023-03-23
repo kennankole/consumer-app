@@ -1,10 +1,8 @@
 class CategoriesController < ApplicationController
-  def show; end
-
   def index
     if user_signed_in?
-      @totals = Entity.where(user: current_user.id).sum(:amout)
       @group = Group.where(user: current_user.id)
+      @groups = Group.where(user: current_user.id).includes(:entities).all
     else
       redirect_to new_user_session_path
     end
@@ -32,10 +30,6 @@ class CategoriesController < ApplicationController
       redirect_to new_user_session_path
     end
   end
-
-  def destroy; end
-
-  def edit; end
 
   private
 
