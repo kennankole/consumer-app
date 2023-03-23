@@ -1,18 +1,18 @@
 databases:
-  - name: consumer-app
-    databaseName: consumer-app
-    user: consumer-app
+  - name: consumerapp
+    databaseName: consumerapp
+    user: consumerapp
 
 services:
   - type: web
-    name: consumer-app
+    name: consumerapp
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: consumer-app
+          name: consumerapp
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
