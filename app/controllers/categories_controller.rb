@@ -1,7 +1,7 @@
 class CategoriesController < ApplicationController
   def index
     if user_signed_in?
-      @group = Group.where(user: current_user.id)
+      @totals = Group.where(user: current_user.id).includes(:entities).sum(:amout)
       @groups = Group.where(user: current_user.id).includes(:entities).all
     else
       redirect_to new_user_session_path
