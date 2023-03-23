@@ -95,7 +95,7 @@ consumer expenses on shopping done online
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://google.com)
+- [Live Demo Link](https://consumer-app-17ao.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
