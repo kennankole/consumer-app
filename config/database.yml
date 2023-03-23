@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: app_development
+  database: <%= ENV['DATABASE_URL'] %>
   username: postgres
   password: 2300
 
