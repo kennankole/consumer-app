@@ -1,0 +1,45 @@
+<main>
+  <section class="">
+    <% if user_signed_in? %>
+    <div class="header home-page">
+      <div class="categories-link">
+        <%= link_to "CATEGORIES", user_categories_path(user_id: current_user.id), class: "link-text" %>
+      </div>
+    </div>
+    <nav class="nav-elem">
+      <div class="nav-links">
+        <div class="home-text">
+          <p>M-Pesa expense tracker App</p>
+        </div>
+        <div class="login">
+          <%= button_to 'Logout', destroy_user_session_path, method: :delete, class: "logout-btn"%>
+        </div>
+      </div>
+    </nav>
+    <% else %>
+    <nav class="nav-elem">
+      <div class="nav-links">
+        <%= image_tag "https://image.pngaaa.com/195/3865195-middle.png" %>
+        <div class="home-text">
+          <p>M-Pesa expense tracker App</p>
+        </div>
+        <div class="login">
+          <%= link_to 'Login', new_user_session_path %>
+        </div>
+        <div class="sign-up">
+          <%= link_to 'Sign Up', new_user_registration_path %>
+        </div>
+      </div>
+    </nav>
+    <% end %>
+  </section>
+</main>
+
+<%# 
+<section class="main-page">
+  <div class="home-container">
+    
+
+    
+  </div>
+</section> %>
