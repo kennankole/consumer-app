@@ -75,7 +75,7 @@ To get a local copy up and running, follow these steps.
 
 ```sh
  gem install rails
-
+```
 ```sh
   cd my-folder
   git clone https://github.com/kennankole/consumer-app.git
@@ -84,8 +84,8 @@ To get a local copy up and running, follow these steps.
 ### Install
 
 ```sh
-  cd my-project
-  gem install
+  cd consumer-app
+  bundle install
 ```
 
 ### Usage
@@ -97,7 +97,7 @@ To get a local copy up and running, follow these steps.
 ### Run tests
 
 ```sh
-  rspec
+  rspec spec
 ```
 
 ### Deployment
